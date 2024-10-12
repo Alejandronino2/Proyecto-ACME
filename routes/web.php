@@ -1,27 +1,32 @@
 <?php
-
+use App\Http\Middleware\RoleMiddleware;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\AssignmentController;
+use App\Models\Assignment;
+use App\Models\Driver;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
+
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $assignments = Assignment::with(['vehicle', 'driver'])->paginate(10);
+    return view('dashboard', compact('assignments'));
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-    //Route::middleware(['auth', 'role:admin'])->group(function () { --- Arreglar error de logica de rol //
-    Route::middleware(['auth', 'role:admin'])->group(function () {
+
+    Route::middleware(['auth'])->group(function () {
     Route::resource('owners', OwnerController::class);
     Route::resource('drivers', DriverController::class);
     Route::resource('vehicles', VehicleController::class);

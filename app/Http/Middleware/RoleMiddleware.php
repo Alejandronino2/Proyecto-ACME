@@ -10,13 +10,10 @@ class RoleMiddleware
 {
     public function handle(Request $request, Closure $next, $role)
     {
-        // Verifica si el usuario está autenticado y tiene el rol requerido
-        if (!Auth::check() || !Auth::user()->hasRole($role)) {
-            // Redirige o muestra un error si no tiene acceso
-            return redirect('/home')->with('error', 'No tienes acceso a esta sección.');
+        if (!$request->user() || !$request->user()->roles()->where('name', $role)->exists()) {
+            return redirect()->route('dashboard')->with('error', 'No tienes acceso a esta sección.');
         }
 
         return $next($request);
     }
 }
-

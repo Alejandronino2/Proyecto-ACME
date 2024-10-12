@@ -19,7 +19,7 @@ class AssignmentController extends Controller
     
     public function index()
     {
-    $assignments = Assignment::with(['vehicle.owner', 'driver'])->paginate(10); // 10 por página
+    $assignments = Assignment::with(['vehicle.owner', 'driver'])->paginate(10);
     return view('assignments.index', compact('assignments'));
     }
 

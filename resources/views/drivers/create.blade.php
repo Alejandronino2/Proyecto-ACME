@@ -1,5 +1,3 @@
-<!-- resources/views/drivers/create.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
@@ -7,11 +5,6 @@
 
 <form action="{{ route('drivers.store') }}" method="POST">
     @csrf
-
-    <x-driver-form />
-
-    <button type="submit" class="btn btn-success">Guardar</button>
-    <a href="{{ route('drivers.index') }}" class="btn btn-secondary">Cancelar</a>
 
     <div class="mb-3">
         <label for="primer_nombre" class="form-label">Primer Nombre</label>
