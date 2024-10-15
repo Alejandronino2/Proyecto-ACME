@@ -1,5 +1,3 @@
-Aquí tienes el archivo README.md actualizado con la contraseña para los dos usuarios:
-
 # Transportes ACME S.A. - Sistema de Gestión de Vehículos
 
 ## Descripción del Proyecto
