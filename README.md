@@ -75,5 +75,3 @@ Para más información, puedes contactar con el desarrollador:
 
 	•	Diego Alejandro Niño Lozano
 	•	Correo: diegoalejandroninolozano@gmail.com
-
-Ahora se incluye la contraseña `password` para ambos usuarios. ¡Espero que te sea útil!
