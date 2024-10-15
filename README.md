@@ -1,66 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Aquí tienes el archivo README.md actualizado con la contraseña para los dos usuarios:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Transportes ACME S.A. - Sistema de Gestión de Vehículos
 
-## About Laravel
+## Descripción del Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto es una aplicación web desarrollada en Laravel 11 y Bootstrap 5, creada para la empresa Transportes ACME S.A. Su objetivo es gestionar los vehículos, conductores y propietarios utilizados en sus operaciones diarias. La aplicación permite registrar, consultar y generar informes de los vehículos, incluyendo información detallada de los conductores y propietarios.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades Principales
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Registro y gestión de vehículos, conductores y propietarios**: CRUDs completos para cada entidad.
+- **Visualización de informes**: Informe con los datos de los vehículos y propietarios.
+- **Sistema de autenticación**: Login y registro de usuarios.
+  - Usuarios registrados:
+    - `nicolasnino@hibridcode.com` (User)
+    - `alejandronino@hibridcode.com` (Admin)
+  - Contraseña para ambos usuarios: `password`
+- **Encriptación de contraseñas**: Seguridad garantizada para las contraseñas de los usuarios.
+- **Envío de correos mediante SMTP**: Notificaciones por correo electrónico.
+- **Interfaz responsive**: Adaptable a dispositivos móviles gracias a Bootstrap 5.
+- **Vistas separadas para Administradores y Usuarios**.
+- **Animaciones y modales** para una experiencia de usuario mejorada.
 
-## Learning Laravel
+## Tecnologías Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Framework**: Laravel 11
+- **Frontend**: Bootstrap 5
+- **Base de datos**: MySQL
+- **Lenguaje Backend**: PHP 8.x
+- **Autenticación**: Sistema de login con encriptación de contraseñas.
+- **Envío de correos**: Configuración de SMTP.
+- **Bundler de assets**: Vite
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Instalación
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clonar el repositorio:
 
-## Laravel Sponsors
+   ```bash
+   git clone https://github.com/usuario/acme.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+	2.	Instalar dependencias:
 
-### Premium Partners
+composer install
+npm install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+	3.	Configurar el archivo .env con los datos de conexión a la base de datos y el servidor de correos SMTP.
+	4.	Crear la base de datos:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+CREATE DATABASE acme;
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+	5.	Ejecutar las migraciones y los seeders:
 
-## Security Vulnerabilities
+php artisan migrate --seed
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+	6.	Construir los assets con Vite:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+npm run build
+
+
+	7.	Levantar el servidor de desarrollo:
+
+php artisan serve
+
+
+	8.	Acceder a la aplicación en http://localhost:8000.
+
+URL del Proyecto
+
+El proyecto está desplegado y accesible en: acme.portafoliodiegonino.com
+
+Contacto
+
+Para más información, puedes contactar con el desarrollador:
+
+	•	Diego Alejandro Niño Lozano
+	•	Correo: diegoalejandroninolozano@gmail.com
+
+Ahora se incluye la contraseña `password` para ambos usuarios. ¡Espero que te sea útil!
